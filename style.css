@@ -2,19 +2,13 @@ html {
   scroll-behavior: smooth;
 }
 
-body,
-ul,
-li,
-h1,
-h2,
-a {
+* {
   margin: 0;
   padding: 0;
   font-family: arial;
 }
 
 header {
-  background-color: transparent;
   padding: 20px;
   position: fixed;
   text-align: center;
@@ -23,6 +17,8 @@ header {
   top: 0;
   left: 0;
   right: 0;
+  display: flex;
+  justify-content: center;
 }
 
 header p {
@@ -65,17 +61,17 @@ nav {
   background-color: #f4f4f4;
   padding: 20px;
   position: sticky;
-  top: 20px;
+  top: 90px;
 }
 
 nav ul {
   white-space: nowrap;
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 nav li {
-  width: 30.5%;
+  width: 25%;
   display: inline-block;
   font-size: 24px;
 }
@@ -148,4 +144,112 @@ footer {
   color: white;
   padding: 10px;
   text-align: center;
+}
+
+nav li a:hover {
+  text-decoration: underline;
+  /* background-color: pink; */
+}
+
+.images li:hover {
+  position: relative;
+  top: -4px;
+}
+
+form input:focus {
+  border: 4px dashed #4b4b4b;
+  outline: none;
+}
+
+form input:valid {
+  border: 4px solid green;
+  background: rgb(106, 168, 106);
+}
+
+form input:invalid {
+  border: 4px solid red;
+  background: rgb(172, 74, 74);
+}
+
+article p::first-line {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+@media screen and (max-width: 1400px) {
+  .banner .Welcome h1 {
+    font-size: 40px;
+  }
+
+  nav li {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1155px) {
+  .banner .Welcome h1 {
+    font-size: 30px;
+  }
+
+  header p {
+    font-size: 20px;
+    border: 6px solid grey;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .banner .Welcome h1 {
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .banner .Welcome {
+    position: relative;
+    background-color: #272626;
+    left: 0;
+  }
+
+  .banner .Welcome br {
+    display: none;
+  }
+
+  .banner .Welcome span {
+    font-size: 1em;
+  }
+
+  .images li {
+    width: 100%;
+    margin: 20px auto;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .banner .Welcome h1 {
+    font-size: 10px;
+    position: relative;
+  }
+
+  nav {
+    top: 0;
+  }
+
+  nav li {
+    font-size: 20px;
+    display: block !important;
+    width: 100%;
+    margin: 12px;
+    top: 0;
+  }
+
+  header p {
+    font-size: 10px;
+    border: 2px solid grey;
+    position: relative;
+  }
+
+  header {
+    position: absolute;
+  }
 }
